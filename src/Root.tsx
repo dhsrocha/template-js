@@ -1,4 +1,4 @@
-import { FC } from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 type Props = {};
@@ -11,4 +11,4 @@ const Styled = styled.h1`
 /**
  * @author Diego Rocha <dhsrocha.dev@gmail.com>
  */
-export const Root: FC<Props> = () => <Styled>Root</Styled>;
+export const Root: React.FC<Props> = () => <Styled>Root</Styled>;

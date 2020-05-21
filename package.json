@@ -6,6 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watchAll=true",
     "type-check": "tsc"
   },
   "dependencies": {
@@ -16,13 +18,62 @@
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "@types/node": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
+    "@babel/preset-typescript": "latest",
+    "@types/enzyme": "latest",
+    "@types/enzyme-adapter-react-16": "latest",
+    "@types/jest": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/styled-components": "latest",
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "latest",
+    "enzyme-to-json": "latest",
+    "jest": "latest",
+    "ts-jest": "latest",
     "typescript": "latest"
   },
   "peerDependencies": {
     "react-is": "^16.8.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript",
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest/presets/js-with-babel",
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true,
+        "babelConfig": true
+      }
+    },
+    "testMatch": [
+      "**/*.test.*",
+      "!**/node_modules/**"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/system/testing/enzyme.ts"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^@src/(.*)$": "<rootDir>/src/$1",
+      "^@pages/(.*)$": "<rootDir>/pages/$1"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   }
 }

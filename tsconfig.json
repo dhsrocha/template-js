@@ -17,9 +17,10 @@
       "./node_modules/@types"
     ],
     "lib": [
-      "ES2015",
+      "ES2017",
       "DOM",
-      "DOM.Iterable"
+      "DOM.Iterable",
+      "ScriptHost"
     ],
     "strict": true,
     "forceConsistentCasingInFileNames": true,
