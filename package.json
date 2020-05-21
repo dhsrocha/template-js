@@ -38,19 +38,13 @@
   "peerDependencies": {
     "react-is": "^16.8.0"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-typescript",
-      "@babel/preset-react",
-      "@babel/preset-env"
-    ]
-  },
   "jest": {
     "preset": "ts-jest/presets/js-with-babel",
+    "errorOnDeprecated": true,
     "globals": {
       "ts-jest": {
         "isolatedModules": true,
-        "babelConfig": true
+        "babelConfig": "<rootDir>/src/system/testing/babel.config.json"
       }
     },
     "testMatch": [
@@ -58,7 +52,7 @@
       "!**/node_modules/**"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>/src/system/testing/enzyme.ts"
+      "<rootDir>/src/system/testing/enzyme.config.ts"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
