@@ -9,7 +9,7 @@ describe("Root component.", () => {
   /**
    * @author Diego Rocha <dhsrocha.dev@gmail.com>
    */
-  it("Component has \"Root\" as text.", () => {
+  it("Component has text: Root.", () => {
     // Act
     const subject = shallow(<Root />);
     // Assert

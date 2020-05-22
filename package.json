@@ -34,8 +34,10 @@
     "enzyme-adapter-react-16": "latest",
     "enzyme-to-json": "latest",
     "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jest": "latest",
     "eslint-plugin-json": "latest",
+    "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "latest",
     "jest": "latest",
     "jest-runner-eslint": "latest",
@@ -89,6 +91,8 @@
       "node": true
     },
     "extends": [
+      "prettier",
+      "plugin:prettier/recommended",
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
       "plugin:@typescript-eslint/eslint-recommended",
@@ -111,6 +115,7 @@
     },
     "plugins": [
       "react",
+      "prettier",
       "@typescript-eslint"
     ],
     "settings": {

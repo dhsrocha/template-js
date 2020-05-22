@@ -28,7 +28,10 @@ The main solutions used here for testing are:
 
 ## Linting
 
-The current solution for linting is [`ESLint`](https://eslint.org/). It is integrated with [`Jest`](https://jestjs.io) and triggered along side the corresponding CLI call.
+The following solutions are used to enforce code consistence and best practices. They are integrated to [`Jest`](https://jestjs.io) as plugins and extensions and, therefore, its declared rules are able to trigger along side in the CLI call.
+
+* [`ESLint`](https://eslint.org/): syntax linting; and
+* [`Prettier`](https://prettier.io/): style and format.
 
 ## Deploy
 
