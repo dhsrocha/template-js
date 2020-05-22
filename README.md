@@ -10,7 +10,7 @@
     </a>
 </p>
 
-A basic working application template, based on using the following technologies:
+A basic working application template, using the following technologies:
 
 * [`Typescript`](https://www.typescriptlang.org/);
 * [`Next.js`](https://github.com/zeit/next.js/tree/canary/examples/with-typescript);
@@ -22,9 +22,13 @@ A basic working application template, based on using the following technologies:
 
 The main solutions used here for testing are:
 
-* [`Jest`](https://jestjs.io):
+* [`Jest`](https://jestjs.io): as the standard testing framework;
   * Also the necessary presets (such as [`ts-jest`](https://kulshekhar.github.io/ts-jest) and [`Babel`](https://babeljs.io/) assets) in order to supporting `.ts` / `.tsx` files parsing.
 * [`Enzyme`](https://enzymejs.github.io/enzyme), for controlling [`React`](https://reactjs.org/) components' rendering in tests.
+
+## Linting
+
+The current solution for linting is [`ESLint`](https://eslint.org/). It is integrated with [`Jest`](https://jestjs.io) and triggered along side the corresponding CLI call.
 
 ## Deploy
 

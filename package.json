@@ -6,8 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "jest --coverage",
-    "test:watch": "jest --coverage --watchAll=true",
+    "test": "jest --coverage -F",
+    "test:watch": "jest --coverage --watchAll=true -F",
     "type-check": "tsc"
   },
   "dependencies": {
@@ -25,13 +25,22 @@
     "@types/enzyme": "latest",
     "@types/enzyme-adapter-react-16": "latest",
     "@types/jest": "latest",
+    "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/styled-components": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
     "enzyme": "latest",
     "enzyme-adapter-react-16": "latest",
     "enzyme-to-json": "latest",
+    "eslint": "^7.0.0",
+    "eslint-plugin-jest": "latest",
+    "eslint-plugin-json": "latest",
+    "eslint-plugin-react": "latest",
     "jest": "latest",
+    "jest-runner-eslint": "latest",
+    "prettier": "latest",
     "ts-jest": "latest",
     "typescript": "latest"
   },
@@ -47,6 +56,7 @@
         "babelConfig": "<rootDir>/src/system/testing/babel.config.json"
       }
     },
+    "runner": "jest-runner-eslint",
     "testMatch": [
       "**/*.test.*",
       "!**/node_modules/**"
@@ -61,6 +71,9 @@
       "^@src/(.*)$": "<rootDir>/src/$1",
       "^@pages/(.*)$": "<rootDir>/pages/$1"
     },
+    "watchPlugins": [
+      "jest-runner-eslint/watch-fix"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 80,
@@ -68,6 +81,71 @@
         "lines": 80,
         "statements": -10
       }
+    }
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:jest/recommended",
+      "plugin:jest/style",
+      "plugin:react/recommended"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 11,
+      "sourceType": "module",
+      "warnOnUnsupportedTypeScriptVersion": false
+    },
+    "plugins": [
+      "react",
+      "@typescript-eslint"
+    ],
+    "settings": {
+      "react": {
+        "version": "999.999.999",
+        "propWrapperFunctions": [
+          "forbidExtraProps",
+          {
+            "property": "freeze",
+            "object": "Object"
+          },
+          {
+            "property": "myFavoriteWrapper"
+          }
+        ]
+      }
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
     }
   }
 }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-type Props = {};
+type Props = Record<string, unknown>;
 
 // Just for example. Should be removed.
 const Styled = styled.h1`
