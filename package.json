@@ -25,7 +25,6 @@
     "@types/enzyme": "latest",
     "@types/enzyme-adapter-react-16": "latest",
     "@types/jest": "latest",
-    "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/styled-components": "latest",

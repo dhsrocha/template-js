@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DocumentInitialProps } from "node";
+import { DocumentInitialProps } from "next/document";
 import Document, { DocumentContext } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
