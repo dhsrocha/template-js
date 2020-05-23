@@ -56,5 +56,7 @@ The following solutions are used to enforce code consistence and best practices.
 
 The build is being currently deployed in [`Netlify`](https://www.netlify.com) just for presentation purposes. The configurations used for running the deployment are:
 
+#### Configuration
+
 * Build command: `yarn next start && yarn next export`; and
 * Output folder: `out/`.
