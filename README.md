@@ -8,6 +8,14 @@
         alt="Netlify Status"
         title="netlify-status"/>
     </a>
+    &nbsp;
+    <a
+      href="https://github.com/dhsrocha/template-js/actions">
+      <img
+        src="https://github.com/dhsrocha/template-js/workflows/template-CI/badge.svg"
+        alt="Netlify Status"
+        title="netlify-status"/>
+    </a>
 </p>
 
 <p align="center">
