@@ -72,7 +72,7 @@
         "displayName": "Jest + Enzyme",
         "preset": "ts-jest/presets/js-with-babel",
         "testMatch": [
-          "<rootDir>/**/*.test.*",
+          "<rootDir>/src/**/*.test.*",
           "!<rootDir>/**/node_modules/**"
         ],
         "globals": {
@@ -93,7 +93,7 @@
         "runner": "jest-runner-eslint",
         "displayName": "ESLint",
         "testMatch": [
-          "<rootDir>/**/*.{ts,tsx}",
+          "<rootDir>/src/**/*.{ts,tsx}",
           "!<rootDir>/**/node_modules/**"
         ]
       }

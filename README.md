@@ -11,6 +11,7 @@
 </p>
 
 <p align="center">
+  <a href="#file-naming-convention">File naming convention</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#testing">Testing</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#linting">Linting</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#deployment">Deployment</a>
@@ -23,6 +24,15 @@ A basic working application template, using the following technologies:
   * Also [template creation command](https://github.com/zeit/next.js/tree/canary/examples/with-typescript)
   based on the aforementioned technologies.
 * [`styled-components`](https://styled-components.com): for styling concerns.
+
+## File naming convention
+
+The following depicts the conventions used for concern, as described in `package.json`'s configurations for testing frameworks:
+
+_**PS:** All the files matched by the following extensions should be in `src` folder._
+
+* `.ts` / `.tsx`: Production files;
+* `.test.ts`: Test files. The current configurations does not distinguish which folder they might be in.
 
 ## Testing
 
@@ -46,11 +56,15 @@ The following solutions are used to enforce code consistence and best practices.
 
 ## Deployment
 
+The current commands and configurations are the following:
+
 ### Locally
+
+[`Next.js`](https://github.com/zeit/next.js) is provided for for building the application, which may be used locally (or any other desired environment). As of any framework, is should be run under its corresponding premises.
 
 #### Commands
 
-* `dev`: Builds, starts the application locally, provided [`Next.js`](https://github.com/zeit/next.js) and under its premises.
+* `dev`: Builds, starts the application locally.
 
 ### Production
 
