@@ -78,7 +78,13 @@
         "globals": {
           "ts-jest": {
             "isolatedModules": true,
-            "babelConfig": "<rootDir>/cfg/.babelrc"
+            "babelConfig": {
+              "presets": [
+                "@babel/preset-typescript",
+                "@babel/preset-react",
+                "@babel/preset-env"
+              ]
+            }
           }
         },
         "setupFilesAfterEnv": [
