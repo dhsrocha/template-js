@@ -1,4 +1,4 @@
-import { shallow } from "enzyme";
+import { render } from "enzyme";
 import * as React from "react";
 import { Root } from "./Root";
 
@@ -11,7 +11,7 @@ describe("Root component.", () => {
    */
   it("Component has text: Root.", () => {
     // Act
-    const subject = shallow(<Root />);
+    const subject = render(<Root />);
     // Assert
     expect(subject.text()).toBe("Root");
   });
