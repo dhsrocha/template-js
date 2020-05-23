@@ -33,11 +33,11 @@
     "enzyme": "latest",
     "enzyme-adapter-react-16": "latest",
     "enzyme-to-json": "latest",
-    "eslint": "latest",
-    "eslint-config-prettier": "latest",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jest": "latest",
     "eslint-plugin-json": "latest",
-    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "latest",
     "jest": "latest",
     "jest-environment-enzyme": "latest",
@@ -51,32 +51,11 @@
     "react-is": "^16.8.0"
   },
   "jest": {
-    "preset": "ts-jest/presets/js-with-babel",
     "errorOnDeprecated": true,
-    "globals": {
-      "ts-jest": {
-        "isolatedModules": true,
-        "babelConfig": "<rootDir>/cfg/.babelrc"
-      }
-    },
-    "testMatch": [
-      "**/*.test.*",
-      "!**/node_modules/**"
-    ],
-    "setupFilesAfterEnv": [
-      "jest-enzyme"
-    ],
-    "testEnvironment": "enzyme",
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
     "moduleNameMapper": {
       "^@src/(.*)$": "<rootDir>/src/$1",
       "^@pages/(.*)$": "<rootDir>/pages/$1"
     },
-    "watchPlugins": [
-      "jest-runner-eslint/watch-fix"
-    ],
     "coverageThreshold": {
       "global": {
         "branches": 80,
@@ -84,7 +63,41 @@
         "lines": 80,
         "statements": -10
       }
-    }
+    },
+    "watchPlugins": [
+      "jest-runner-eslint/watch-fix"
+    ],
+    "projects": [
+      {
+        "displayName": "Jest + Enzyme",
+        "preset": "ts-jest/presets/js-with-babel",
+        "testMatch": [
+          "<rootDir>/**/*.test.*",
+          "!<rootDir>/**/node_modules/**"
+        ],
+        "globals": {
+          "ts-jest": {
+            "isolatedModules": true,
+            "babelConfig": "<rootDir>/cfg/.babelrc"
+          }
+        },
+        "setupFilesAfterEnv": [
+          "jest-enzyme"
+        ],
+        "testEnvironment": "enzyme",
+        "snapshotSerializers": [
+          "enzyme-to-json/serializer"
+        ]
+      },
+      {
+        "runner": "jest-runner-eslint",
+        "displayName": "ESLint",
+        "testMatch": [
+          "<rootDir>/**/*.{ts,tsx}",
+          "!<rootDir>/**/node_modules/**"
+        ]
+      }
+    ]
   },
   "eslintConfig": {
     "env": {
