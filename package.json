@@ -10,6 +10,12 @@
     "test:watch": "jest --coverage --watchAll=true -F",
     "type-check": "tsc"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
+    }
+  },
   "dependencies": {
     "isomorphic-unfetch": "3.0.0",
     "next": "latest",
@@ -39,6 +45,7 @@
     "eslint-plugin-json": "latest",
     "eslint-plugin-prettier": "latest",
     "eslint-plugin-react": "latest",
+    "husky": "latest",
     "jest": "latest",
     "jest-environment-enzyme": "latest",
     "jest-enzyme": "latest",

@@ -55,6 +55,10 @@ The main solutions used here for testing are:
 * `test`: Run testing battery once, with fixing code style when is applicable; and
 * `test:watch`: Keep running the test battery whenever occurs a modification on a `.ts`/`.tsx` file.
 
+### Git hooks
+
+In order to ensure robust code in SCM, the solution [`Husky`](https://github.com/dhsrocha/typicode/husky) ensures to trigger `yarn test` script call in a `pre-commit` or a `pre-push` events.
+
 ## Linting
 
 The following solutions are used to enforce code consistence and best practices. They are integrated to [`Jest`](https://jestjs.io) as plugins and extensions and, therefore, its declared rules are able to trigger along side in the CLI call.
