@@ -1,4 +1,3 @@
-import * as React from "react";
 import { createGlobalStyle } from "styled-components";
 import * as PropTypes from "prop-types";
 

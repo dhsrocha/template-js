@@ -1,5 +1,4 @@
 import { Style } from "@src/Style";
-import * as React from "react";
 
 /**
  * @author Diego Rocha <dhsrocha.dev@gmail.com>

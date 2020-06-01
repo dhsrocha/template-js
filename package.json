@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@babel/core": "latest",
+    "@babel/plugin-transform-react-jsx": "^7.10.1",
     "@babel/preset-env": "latest",
     "@babel/preset-react": "latest",
     "@babel/preset-typescript": "latest",
@@ -87,6 +88,9 @@
                 "@babel/preset-typescript",
                 "@babel/preset-react",
                 "@babel/preset-env"
+              ],
+              "plugins": [
+                "@babel/plugin-transform-react-jsx"
               ]
             }
           }
@@ -157,7 +161,8 @@
             "object": "Object"
           },
           {
-            "property": "myFavoriteWrapper"
+            "property": "assign",
+            "object": "Object"
           }
         ]
       }
@@ -178,7 +183,8 @@
       "semi": [
         "error",
         "always"
-      ]
+      ],
+      "react/react-in-jsx-scope": "off"
     }
   }
 }
