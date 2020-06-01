@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "@babel/core": "latest",
-    "@babel/plugin-transform-react-jsx": "latest",
     "@babel/preset-env": "latest",
     "@babel/preset-react": "latest",
     "@babel/preset-typescript": "latest",
