@@ -1,5 +1,5 @@
 import { render } from "enzyme";
-import { Root } from "./Root";
+import { Root } from ".";
 
 /**
  * @author Diego Rocha <dhsrocha.dev@gmail.com>

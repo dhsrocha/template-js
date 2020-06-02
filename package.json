@@ -8,7 +8,9 @@
     "start": "next start",
     "test": "jest --coverage -F",
     "test:watch": "jest --coverage --watchAll=true -F",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "ui": "start-storybook",
+    "ui:build": "build-storybook -o .dist"
   },
   "husky": {
     "hooks": {
@@ -29,14 +31,19 @@
     "@babel/preset-env": "latest",
     "@babel/preset-react": "latest",
     "@babel/preset-typescript": "latest",
+    "@storybook/preset-typescript": "latest",
+    "@storybook/react": "latest",
     "@types/enzyme": "latest",
     "@types/enzyme-adapter-react-16": "latest",
     "@types/jest": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/storybook__react": "latest",
     "@types/styled-components": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "babel-loader": "latest",
+    "babel-plugin-react-require": "latest",
     "enzyme": "latest",
     "enzyme-adapter-react-16": "latest",
     "enzyme-to-json": "latest",
@@ -59,7 +66,9 @@
     "typescript-styled-plugin": "latest"
   },
   "peerDependencies": {
-    "react-is": "^16.8.0"
+    "react-is": ">16.8.0",
+    "babel-loader": ">8.1.0",
+    "eslint": ">6.0.0"
   },
   "jest": {
     "errorOnDeprecated": true,
