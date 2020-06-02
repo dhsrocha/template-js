@@ -10,7 +10,7 @@
     "test:watch": "jest --coverage --watchAll=true -F",
     "type-check": "tsc",
     "ui": "start-storybook",
-    "ui:build": "build-storybook -o .dist"
+    "ui:build": "build-storybook -o .next/storybook"
   },
   "husky": {
     "hooks": {
@@ -71,6 +71,7 @@
     "eslint": ">6.0.0"
   },
   "jest": {
+    "bail": true,
     "errorOnDeprecated": true,
     "coverageThreshold": {
       "global": {
@@ -80,6 +81,15 @@
         "statements": -10
       }
     },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!<rootDir>/src/**/stories.*"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/**/stories.*"
+    ],
     "watchPlugins": [
       "jest-runner-eslint/watch-fix"
     ],

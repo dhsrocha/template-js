@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = {
   webpack: (config, { webpack }) => {
-    config.plugins.push(new webpack.IgnorePlugin(/.test./));
+    config.plugins.push(new webpack.IgnorePlugin(/(.test.|stories)/));
     config.resolve.alias = {
       ...config.resolve.alias,
       "@src": path.resolve(__dirname, "./src"),
