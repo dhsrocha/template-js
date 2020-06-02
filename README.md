@@ -19,28 +19,35 @@
 </p>
 
 <p align="center">
-  <a href="#file-naming-convention">File naming convention</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#testing">Testing</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#linting">Linting</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#file-naming-convention">File naming convention</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#testing">Testing</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#linting">Linting</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#deployment">Deployment</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#design-system">Design System</a>
 </p>
 
-A basic working application template, using the following technologies:
+A basic working web application template, using the following technologies:
 
 * [`Typescript`](https://www.typescriptlang.org): as the base language used for this repository;
-* [`Next.js`](https://github.com/zeit/next.js);
-  * Also [template creation command](https://github.com/zeit/next.js/tree/canary/examples/with-typescript)
-  based on the aforementioned technologies.
+* [`Next.js`](https://github.com/zeit/next.js):
+  * Supplied by its [template creation command](https://github.com/zeit/next.js/tree/canary/examples/with-typescript), based on the aforementioned technologies.
+  * `Preact` is being used in deployment instead of `React`, since this repository purpose should be solely for web. The latter is being used only in development/locally.
 * [`styled-components`](https://styled-components.com): for styling concerns.
 
 ## File naming convention
 
 The following depicts the conventions used for concern, as described in `package.json`'s configurations for testing frameworks:
 
-_**PS:** All the files matched by the following extensions should be in `src` folder._
+_**PS:** All the files matched by the following extensions should be in a folder under the `src`._
 
 * `.ts` / `.tsx`: Production files;
-* `.test.ts`: Test files. The current configurations does not distinguish which folder they might be in.
+* The current configuration does not distinguish which folder the files of the following types might be in:
+  * `.test.ts`: Test files.
+  * `stories.tsx`: Stories files.
 
 ## Testing
 
@@ -76,7 +83,7 @@ The current commands and configurations are the following:
 
 #### Commands
 
-* `dev`: Builds, starts the application locally.
+* `dev`: Builds and serves an interactive and reloadable application instance, which can be used for local development purposes.
 
 ### Production
 
@@ -86,3 +93,14 @@ The build is being currently deployed in [`Netlify`](https://www.netlify.com) ju
 
 * Build command: `yarn next start && yarn next export`; and
 * Output folder: `out/`.
+
+## Design System
+
+[Storybook](https://storybook.js.org/) is the tool added for providing the repository's design system development.
+
+Altough it is unusual, the configuration is able to support Typesript files, as well as `React` importing is implicity and can be omitted from the source-code.
+
+### Commands
+
+* `ui`: Builds and serves an interactive and reloadable Storybook instance mapping the current `stories.tsx` files in repository.
+* `ui:build`: Builds a product's static deployment, according to the its premises.
