@@ -19,6 +19,16 @@
 </p>
 
 <p align="center">
+    <a
+      href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ET7CGUSGVJGWG&currency_code=USD&source=url">
+      <img
+        src="https://img.shields.io/badge/Donate-PayPal-green.svg"
+        alt="Buy me a mug"
+        title="donate-paypal"/>
+    </a>
+</p>
+
+<p align="center">
   <a href="#file-naming-convention">File naming convention</a>
   &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#testing">Testing</a>
@@ -35,7 +45,7 @@ A basic working web application template, using the following technologies:
 * [`Typescript`](https://www.typescriptlang.org): as the base language used for this repository;
 * [`Next.js`](https://github.com/zeit/next.js):
   * Supplied by its [template creation command](https://github.com/zeit/next.js/tree/canary/examples/with-typescript), based on the aforementioned technologies.
-  * `Preact` is being used in deployment instead of `React`, since this repository purpose should be solely for web. The latter is being used only in development/locally.
+  * [`Preact`](https://preactjs.com) is being used in deployment instead of [`React`](https://reactjs.org), since this repository purpose should be solely for web. The latter is being used only in development/locally.
 * [`styled-components`](https://styled-components.com): for styling concerns.
 
 ## File naming convention
