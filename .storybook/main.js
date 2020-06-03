@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-const resolve = require("path").resolve;
+const { resolve } = require("path");
 
 module.exports = {
   stories: ["../src/**/stories.tsx"],
@@ -14,8 +14,10 @@ module.exports = {
     },
   ],
   webpackFinal: async (config) => {
-    config.resolve.alias["@src"] = resolve(__dirname, "..", "./src");
-    config.resolve.alias["@pages"] = resolve(__dirname, "..", "./pages");
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      ...require("../next.config").aliases,
+    };
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
