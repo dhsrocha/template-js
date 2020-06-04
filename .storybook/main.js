@@ -16,6 +16,17 @@ module.exports = {
     "@storybook/addon-actions",
     "@storybook/addon-viewport",
     "@storybook/addon-a11y",
+    "@storybook/addon-links",
+    "@storybook/addon-knobs",
+    {
+      name: "@storybook/addon-storysource",
+      options: {
+        rule: {
+          test: [/stories\.tsx?$/],
+          include: [resolve("src")],
+        },
+      },
+    },
   ],
   webpackFinal: async (config) => {
     config.resolve.alias = {
