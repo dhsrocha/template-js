@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-const { resolve } = require("path");
+const resolve = (path) => require("path").resolve(__dirname, "..", path);
 
 module.exports = {
   stories: ["../src/**/stories.tsx"],
@@ -8,10 +8,14 @@ module.exports = {
       name: "@storybook/preset-typescript",
       options: {
         transpileManager: true,
-        tsLoaderOptions: { configFile: resolve(__dirname, "../tsconfig.json") },
-        include: [resolve(__dirname, "../src")],
+        tsLoaderOptions: { configFile: resolve("tsconfig.json") },
       },
     },
+    "@storybook/addon-docs",
+    "@storybook/addon-essentials",
+    "@storybook/addon-actions",
+    "@storybook/addon-viewport",
+    "@storybook/addon-a11y",
   ],
   webpackFinal: async (config) => {
     config.resolve.alias = {
@@ -21,6 +25,7 @@ module.exports = {
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
+      exclude: /node_modules/,
       loader: require.resolve("babel-loader"),
       options: {
         presets: [
@@ -35,6 +40,6 @@ module.exports = {
       },
     });
 
-    return { ...config };
+    return config;
   },
 };

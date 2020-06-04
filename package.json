@@ -10,7 +10,7 @@
     "test:watch": "jest --coverage --watchAll=true -F",
     "type-check": "tsc",
     "ui": "start-storybook",
-    "ui:build": "build-storybook -o .next/storybook"
+    "ui:build": "build-storybook -o .build/storybook"
   },
   "husky": {
     "hooks": {
@@ -31,6 +31,10 @@
     "@babel/preset-env": "latest",
     "@babel/preset-react": "latest",
     "@babel/preset-typescript": "latest",
+    "@storybook/addon-a11y": "latest",
+    "@storybook/addon-actions": "latest",
+    "@storybook/addon-docs": "latest",
+    "@storybook/addon-essentials": "latest",
     "@storybook/preset-typescript": "latest",
     "@storybook/react": "latest",
     "@types/enzyme": "latest",
@@ -66,13 +70,14 @@
     "typescript-styled-plugin": "latest"
   },
   "peerDependencies": {
-    "react-is": ">16.8.0",
     "babel-loader": ">8.1.0",
-    "eslint": ">6.0.0"
+    "eslint": ">6.0.0",
+    "react-is": ">16.8.0"
   },
   "jest": {
     "bail": true,
     "errorOnDeprecated": true,
+    "coverageDirectory": "build/coverage",
     "coverageThreshold": {
       "global": {
         "branches": 80,
