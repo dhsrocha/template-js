@@ -39,11 +39,7 @@ module.exports = {
       exclude: /node_modules/,
       loader: require.resolve("babel-loader"),
       options: {
-        presets: [
-          ["@babel/preset-react", { flow: false, typescript: true }],
-          ["@babel/preset-typescript", {}],
-          ["@babel/preset-env", {}],
-        ],
+        presets: ["next/babel"],
         plugins: [
           "@babel/plugin-transform-react-jsx",
           "babel-plugin-react-require",

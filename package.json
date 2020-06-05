@@ -28,9 +28,6 @@
   },
   "devDependencies": {
     "@babel/core": "latest",
-    "@babel/preset-env": "latest",
-    "@babel/preset-react": "latest",
-    "@babel/preset-typescript": "latest",
     "@storybook/addon-a11y": "latest",
     "@storybook/addon-actions": "latest",
     "@storybook/addon-docs": "latest",
@@ -71,7 +68,7 @@
     "ts-jest": "latest",
     "typescript": "latest",
     "typescript-styled-plugin": "latest"
-  },
+  },  
   "peerDependencies": {
     "babel-loader": ">8.1.0",
     "eslint": ">6.0.0",
@@ -113,11 +110,7 @@
           "ts-jest": {
             "isolatedModules": true,
             "babelConfig": {
-              "presets": [
-                "@babel/preset-typescript",
-                "@babel/preset-react",
-                "@babel/preset-env"
-              ],
+              "presets": ["next/babel"],
               "plugins": [
                 "@babel/plugin-transform-react-jsx"
               ]
