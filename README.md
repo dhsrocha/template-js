@@ -2,14 +2,6 @@
 
 <p align="center">
     <a
-      href="https://app.netlify.com/sites/template-js/deploys">
-      <img
-        src="https://api.netlify.com/api/v1/badges/0c426f36-6077-4b04-a5f9-6faafd7871c0/deploy-status"
-        alt="Netlify Status"
-        title="netlify-status"/>
-    </a>
-    &nbsp;
-    <a
       href="https://github.com/dhsrocha/template-js/actions">
       <img
         src="https://github.com/dhsrocha/template-js/workflows/template-CI/badge.svg"
