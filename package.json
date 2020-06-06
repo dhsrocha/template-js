@@ -68,7 +68,7 @@
     "ts-jest": "latest",
     "typescript": "latest",
     "typescript-styled-plugin": "latest"
-  },  
+  },
   "peerDependencies": {
     "babel-loader": ">8.1.0",
     "eslint": ">6.0.0",
@@ -110,7 +110,9 @@
           "ts-jest": {
             "isolatedModules": true,
             "babelConfig": {
-              "presets": ["next/babel"],
+              "presets": [
+                "next/babel"
+              ],
               "plugins": [
                 "@babel/plugin-transform-react-jsx"
               ]
@@ -192,7 +194,10 @@
     "rules": {
       "indent": [
         "error",
-        2
+        2,
+        {
+          "SwitchCase": 1
+        }
       ],
       "linebreak-style": [
         "error",
