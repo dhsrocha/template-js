@@ -56,7 +56,7 @@ _**PS:** All the files matched by the following extensions should be in a folder
 The main solutions used here for testing are:
 
 * [`Jest`](https://jestjs.io): as the standard testing framework;
-  * Also the necessary presets (such as [`ts-jest`](https://kulshekhar.github.io/ts-jest) and [`Babel`](https://babeljs.io) assets) in order to supporting `.ts` / `.tsx` files parsing.
+  * Also the necessary presets (such as [`ts-jest`](https://kulshekhar.github.io/ts-jest) and [`Babel`](https://babeljs.io) assets) in order to support `.ts` / `.tsx` files parsing.
 * [`Enzyme`](https://enzymejs.github.io/enzyme), for controlling [`React`](https://reactjs.org) components' rendering in tests.
 
 ### Commands
