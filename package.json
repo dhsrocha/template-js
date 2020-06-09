@@ -32,9 +32,9 @@
     "@storybook/addon-actions": "latest",
     "@storybook/addon-docs": "latest",
     "@storybook/addon-essentials": "latest",
+    "@storybook/addon-knobs": "latest",
     "@storybook/addon-links": "latest",
     "@storybook/addon-storysource": "latest",
-    "@storybook/addon-knobs": "latest",
     "@storybook/preset-typescript": "latest",
     "@storybook/react": "latest",
     "@types/enzyme": "latest",
@@ -55,8 +55,10 @@
     "eslint-config-prettier": "latest",
     "eslint-plugin-jest": "latest",
     "eslint-plugin-json": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-prettier": "latest",
     "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "latest",
     "husky": "latest",
     "jest": "latest",
     "jest-environment-enzyme": "latest",
@@ -64,6 +66,7 @@
     "jest-runner-eslint": "latest",
     "prettier": "latest",
     "react": "latest",
+    "react-axe": "latest",
     "react-dom": "latest",
     "ts-jest": "latest",
     "typescript": "latest",
@@ -155,7 +158,9 @@
       "plugin:@typescript-eslint/eslint-recommended",
       "plugin:jest/recommended",
       "plugin:jest/style",
-      "plugin:react/recommended"
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react-hooks/recommended"
     ],
     "globals": {
       "Atomics": "readonly",
@@ -173,7 +178,9 @@
     "plugins": [
       "react",
       "prettier",
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "jsx-a11y",
+      "react-hooks"
     ],
     "settings": {
       "react": {
