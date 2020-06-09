@@ -66,7 +66,10 @@ The main solutions used here for testing are:
 
 ### Git hooks
 
-In order to ensure robust code in SCM, the solution [`Husky`](https://github.com/dhsrocha/typicode/husky) ensures to trigger `yarn test` script call in a `pre-commit` or a `pre-push` events.
+In order to ensure sending only robust code to SCM, the solution [`Husky`](https://github.com/dhsrocha/typicode/husky) is going to trigger the following script command when the corresponding event occurs:
+
+* `pre-commit`: `yarn test -o`; and
+* `pre-push`: `yarn test`.
 
 ## Linting
 
