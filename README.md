@@ -94,8 +94,9 @@ The main solutions used here for testing are:
 
 In order to ensure sending only robust code to SCM, the solution [`Husky`](https://github.com/dhsrocha/typicode/husky) is going to trigger the following script command when the corresponding event occurs:
 
-* `pre-commit`: `yarn test -o`; and
-* `pre-push`: `yarn test`.
+* `pre-commit`: `yarn test -o`;
+* `pre-push`: `yarn test`; and
+* `pre-checkout`: `[ -n \"$(git status -s)\" ] && git add \"$(git rev-parse --show-toplevel)\" && git stash`
 
 ## Deployment
 

@@ -15,7 +15,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn test -o",
-      "pre-push": "yarn test"
+      "pre-push": "yarn test",
+      "pre-checkout": "[ -n \"$(git status -s)\" ] && git add \"$(git rev-parse --show-toplevel)\" && git stash"
     }
   },
   "dependencies": {
