@@ -11,6 +11,18 @@ describe("Render tests.", () => {
     // Assert
     expect(subject.find("section")).toBeDefined();
   });
+  it("<section> should be the topmost component.", async () => {
+    // Act
+    const subject = shallow(<Input />)
+      .find("section")
+      .props().children;
+    // Assert
+    expect(subject).toEqual([
+      <input type="checkbox" />,
+      <input type="text" />,
+      <button />,
+    ]);
+  });
   describe("Checkbox.", () => {
     it("Should render one <text[type=checkbox]/>.", async () => {
       // Act
