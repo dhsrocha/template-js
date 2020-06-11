@@ -25,4 +25,12 @@ describe("Render tests.", () => {
     // Assert
     expect(subject).toHaveLength(1);
   });
+  it("Should render one <text[type=checkbox]/>.", async () => {
+    // Act
+    const subject = shallow(<Input />)
+      .find("input")
+      .find({ type: "checkbox" });
+    // Assert
+    expect(subject).toHaveLength(1);
+  });
 });
