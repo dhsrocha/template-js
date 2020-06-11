@@ -11,4 +11,10 @@ describe("Render tests.", () => {
     // Assert
     expect(subject.find("section")).toBeDefined();
   });
+  it("Should render text input.", async () => {
+    // Act
+    const subject = shallow(<Input />);
+    // Assert
+    expect(subject.find("input").find({ type: "text" })).toHaveLength(1);
+  });
 });
