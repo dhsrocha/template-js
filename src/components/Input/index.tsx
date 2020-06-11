@@ -4,6 +4,7 @@ export const Input = (): ReactElement => {
   return (
     <section>
       <input type="text" />
+      <button></button>
     </section>
   );
 };
