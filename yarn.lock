@@ -2591,7 +2591,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-axe@^3.1.0":
+"@types/react-axe@latest":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@types/react-axe/-/react-axe-3.1.0.tgz#d8bd3f3f1077e7e2790c2a500f3ccefde8f5567b"
   integrity sha512-zBQGSlWVwiMiKmDsFS5+2uO5tt1M2fdD3mTkOAA4EwV2uWrzi02d5NMhLZtxpyaCWtwz5xNLO4INotoWZUAg0A==
@@ -11240,7 +11240,7 @@ raw-loader@^3.1.0:
     loader-utils "^1.1.0"
     schema-utils "^2.0.1"
 
-react-axe@^3.4.1:
+react-axe@latest:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/react-axe/-/react-axe-3.4.1.tgz#8874ca48b5af71452d97c2991d37cdcbba6c3a48"
   integrity sha512-1UDeqesgb5gCj2XPE5WXqKv2xcwGGeWIock3uBVtZSVGbZGVzjmgYf4eRyNJ8BNnHpPQKUs4Ro5jW2+V037deg==
