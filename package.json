@@ -10,7 +10,7 @@
     "test:watch": "jest --coverage --watchAll=true -F",
     "type-check": "tsc",
     "ui": "start-storybook",
-    "ui:build": "build-storybook -o .build/storybook"
+    "ui:build": "build-storybook -o build/storybook"
   },
   "husky": {
     "hooks": {
