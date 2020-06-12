@@ -2591,6 +2591,15 @@
     "@types/history" "*"
     "@types/react" "*"
 
+"@types/react-axe@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@types/react-axe/-/react-axe-3.1.0.tgz#d8bd3f3f1077e7e2790c2a500f3ccefde8f5567b"
+  integrity sha512-zBQGSlWVwiMiKmDsFS5+2uO5tt1M2fdD3mTkOAA4EwV2uWrzi02d5NMhLZtxpyaCWtwz5xNLO4INotoWZUAg0A==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-dom" "*"
+    axe-core "3.2.2"
+
 "@types/react-color@^3.0.1":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@types/react-color/-/react-color-3.0.2.tgz#41bc40f564eb058fb0822c1742438bcd0b823249"
@@ -2598,7 +2607,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-dom@latest":
+"@types/react-dom@*", "@types/react-dom@latest":
   version "16.9.8"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.8.tgz#fe4c1e11dfc67155733dfa6aa65108b4971cb423"
   integrity sha512-ykkPQ+5nFknnlU6lDd947WbQ6TE3NNzbQAkInC2EKY1qeYdTKp7onFusmYZb+ityzx2YviqT6BXSu+LyWWJwcA==
@@ -3470,6 +3479,11 @@ aws4@^1.8.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.10.0.tgz#a17b3a8ea811060e74d47d306122400ad4497ae2"
   integrity sha512-3YDiu347mtVtjpyV3u5kVqQLP242c06zwDOgpeRnybmXlYYsLbtTrUBUm8i8srONt+FWobl5aibnU1030PeeuA==
+
+axe-core@3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.2.2.tgz#b06d6e9ae4636d706068843272bfaeed3fe97362"
+  integrity sha512-gAy4kMSPpuRJV3mwictJqlg5LhE84Vw2CydKdC4tvrLhR6+G3KW51zbL/vYujcLA2jvWOq3HMHrVeNuw+mrLVA==
 
 axe-core@^3.3.2, axe-core@^3.5.0:
   version "3.5.4"
@@ -11226,7 +11240,7 @@ raw-loader@^3.1.0:
     loader-utils "^1.1.0"
     schema-utils "^2.0.1"
 
-react-axe@latest:
+react-axe@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/react-axe/-/react-axe-3.4.1.tgz#8874ca48b5af71452d97c2991d37cdcbba6c3a48"
   integrity sha512-1UDeqesgb5gCj2XPE5WXqKv2xcwGGeWIock3uBVtZSVGbZGVzjmgYf4eRyNJ8BNnHpPQKUs4Ro5jW2+V037deg==
