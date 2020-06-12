@@ -8,10 +8,10 @@ const isSSR = () => typeof window === "undefined";
  * @see https://github.com/dequelabs/react-axe/issues/125
  */
 if (process.env.NODE_ENV !== "production" && !isSSR()) {
-  const React = require("react"); // eslint-disable-line
+  const Renderer = require("react"); // eslint-disable-line
   const DOM = require("react-dom"); // eslint-disable-line
   const axe = require("react-axe"); // eslint-disable-line
-  axe(React, DOM, 1000);
+  axe(Renderer, DOM, 1000);
 }
 
 export default function MyApp({ Component, pageProps }: Props): RE {
