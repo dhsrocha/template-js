@@ -43,7 +43,7 @@
     "@types/react": "latest",
     "@types/react-axe": "latest",
     "@types/react-dom": "latest",
-    "@types/react-test-renderer": "^16.9.2",
+    "@types/react-test-renderer": "latest",
     "@types/storybook__react": "latest",
     "@types/styled-components": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
