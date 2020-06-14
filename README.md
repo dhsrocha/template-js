@@ -48,7 +48,7 @@ _**PS:** All the files matched by the following extensions should be in a folder
 
 * `.ts` / `.tsx`: Production files;
 * The current configuration does not distinguish which folder the files of the following types might be in:
-  * `.test.ts`: Test files.
+  * `<Component>.test.ts`: Test files with the corresponding Component name. This is mandatory due to `@storybook/addon-jest` file scanning for test cases.
   * `stories.tsx`: Stories files.
 
 ## Testing
