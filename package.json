@@ -67,6 +67,7 @@
     "jest-environment-enzyme": "latest",
     "jest-enzyme": "latest",
     "jest-runner-eslint": "latest",
+    "jest-styled-components": "latest",
     "prettier": "latest",
     "react": "latest",
     "react-axe": "latest",
