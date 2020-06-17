@@ -20,19 +20,19 @@
     </a>
 </p>
 
+A robust web application template.
+
 <p align="center">
   <a href="#architecture">Architecture</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
   <a href="#design-system">Design System</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
   <a href="#linting">Linting</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
   <a href="#testing">Testing</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
   <a href="#deployment">Deployment</a>
 </p>
-
-A basic working web application template.
 
 ## Architecture
 
@@ -48,9 +48,9 @@ The solution relies on the following technologies:
 
 ### Premises
 
-* `React` is consieded a UMD resource. Therefore, even in technologies not supported by directly by Next.js, the importing is implicit and can be omitted from the source-code.
+* `React` is considered a UMD resource in this solution's scope. Therefore, even in technologies not supported by directly by Next.js, the importing is implicit and can be omitted from the source-code.
 
-## File naming convention
+### File naming convention
 
 The following depicts the conventions used for concern, as described in `package.json`'s configurations for testing frameworks:
 
@@ -61,14 +61,21 @@ _**PS:** All the files matched by the following extensions should be in a folder
   * `<Component>.test.ts`: Test files with the corresponding Component name. This is mandatory due to `@storybook/addon-jest` file scanning for test cases.
   * `stories.tsx`: Stories files.
 
-## Design System tooling
+## Design System
 
-[Storybook](https://storybook.js.org/) is the tool added for providing the repository's design system development.
+The tool of choice for providing the design system development is [Storybook.js](https://storybook.js.org).
 
 ### Features
 
 * Typescript support as in any other files throughtout the project;
 * It comes along with various addons' configurations. The scripts to configure its workings, as its documentation stands, can be checked for details.
+
+## Linting
+
+The following solutions are used to enforce code consistence and best practices. They are integrated to [`Jest`](https://jestjs.io) as plugins and extensions and, therefore, its declared rules are able to trigger along side in the CLI call.
+
+* [`ESLint`](https://eslint.org): syntax linting; and
+* [`Prettier`](https://prettier.io): style and format.
 
 ## Testing
 
@@ -89,13 +96,6 @@ In order to ensure sending only robust code to SCM, the solution [`Husky`](https
 
 * `pre-commit`: `yarn test -o`; and
 * `pre-push`: `yarn test`.
-
-## Linting
-
-The following solutions are used to enforce code consistence and best practices. They are integrated to [`Jest`](https://jestjs.io) as plugins and extensions and, therefore, its declared rules are able to trigger along side in the CLI call.
-
-* [`ESLint`](https://eslint.org): syntax linting; and
-* [`Prettier`](https://prettier.io): style and format.
 
 ## Deployment
 
