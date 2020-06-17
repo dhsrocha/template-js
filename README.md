@@ -21,24 +21,34 @@
 </p>
 
 <p align="center">
-  <a href="#file-naming-convention">File naming convention</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#testing">Testing</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#linting">Linting</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#deployment">Deployment</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#architecture">Architecture</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
   <a href="#design-system">Design System</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
+  <a href="#linting">Linting</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
+  <a href="#testing">Testing</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;
+  <a href="#deployment">Deployment</a>
 </p>
 
-A basic working web application template, using the following technologies:
+A basic working web application template.
+
+## Architecture
+
+### Main dependencies
+
+The solution relies on the following technologies:
 
 * [`Typescript`](https://www.typescriptlang.org): as the base language used for this repository;
 * [`Next.js`](https://github.com/zeit/next.js):
   * Supplied by its [template creation command](https://github.com/zeit/next.js/tree/canary/examples/with-typescript), based on the aforementioned technologies.
   * [`Preact`](https://preactjs.com) is being used in deployment instead of [`React`](https://reactjs.org), since this repository purpose should be solely for web. The latter is being used only in development/locally.
 * [`styled-components`](https://styled-components.com): for styling concerns.
+
+### Premises
+
+* `React` is consieded a UMD resource. Therefore, even in technologies not supported by directly by Next.js, the importing is implicit and can be omitted from the source-code.
 
 ## File naming convention
 
@@ -50,6 +60,15 @@ _**PS:** All the files matched by the following extensions should be in a folder
 * The current configuration does not distinguish which folder the files of the following types might be in:
   * `<Component>.test.ts`: Test files with the corresponding Component name. This is mandatory due to `@storybook/addon-jest` file scanning for test cases.
   * `stories.tsx`: Stories files.
+
+## Design System tooling
+
+[Storybook](https://storybook.js.org/) is the tool added for providing the repository's design system development.
+
+### Features
+
+* Typescript support as in any other files throughtout the project;
+* It comes along with various addons' configurations. The scripts to configure its workings, as its documentation stands, can be checked for details.
 
 ## Testing
 
@@ -98,16 +117,6 @@ The build is being currently deployed in [`Vercel`](https://now.sh) just for pre
 
 * Build command: `yarn next start && yarn next export`; and
 * Output folder: `out/`.
-
-## Design System tooling
-
-[Storybook](https://storybook.js.org/) is the tool added for providing the repository's design system development.
-
-### Features
-
-* Altough it is unusual, the configuration is able to support Typesript files;
-* `React` importing is implicit and can be omitted from the source-code; and
-* It comes along with various addons' configurations. The scripts to configure its workings, as its documentation stands, can be checked for details.
 
 ### Commands
 
