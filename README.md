@@ -99,11 +99,15 @@ The build is being currently deployed in [`Vercel`](https://now.sh) just for pre
 * Build command: `yarn next start && yarn next export`; and
 * Output folder: `out/`.
 
-## Design System
+## Design System tooling
 
 [Storybook](https://storybook.js.org/) is the tool added for providing the repository's design system development.
 
-Altough it is unusual, the configuration is able to support Typesript files, as well as `React` importing is implicity and can be omitted from the source-code.
+### Features
+
+* Altough it is unusual, the configuration is able to support Typesript files;
+* `React` importing is implicit and can be omitted from the source-code; and
+* It comes along with various addons' configurations. The scripts to configure its workings, as its documentation stands, can be checked for details.
 
 ### Commands
 
