@@ -92,7 +92,7 @@ The current commands and configurations are the following:
 
 ### Production
 
-The build is being currently deployed in [`Netlify`](https://www.netlify.com) just for presentation purposes. The configurations used for running the deployment are:
+The build is being currently deployed in [`Vercel`](https://now.sh) just for presentation purposes. The configurations used for running the deployment are:
 
 #### Configuration
 
