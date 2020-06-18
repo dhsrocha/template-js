@@ -1,4 +1,4 @@
-import { render } from "enzyme";
+import { create } from "react-test-renderer";
 import { Root } from ".";
 
 /**
@@ -10,8 +10,8 @@ describe("Root component.", () => {
    */
   it("Component has text: Root.", () => {
     // Act
-    const subject = render(<Root />);
+    const subject = create(<Root />);
     // Assert
-    expect(subject.text()).toBe("Root");
+    expect(subject.toJSON().children).toStrictEqual(["Root"]);
   });
 });

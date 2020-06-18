@@ -51,9 +51,6 @@
     "@typescript-eslint/parser": "latest",
     "babel-loader": "latest",
     "babel-plugin-react-require": "latest",
-    "enzyme": "latest",
-    "enzyme-adapter-react-16": "latest",
-    "enzyme-to-json": "latest",
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-jest": "latest",
@@ -65,12 +62,12 @@
     "husky": "latest",
     "jest": "latest",
     "jest-environment-enzyme": "latest",
-    "jest-enzyme": "latest",
     "jest-runner-eslint": "latest",
     "jest-styled-components": "latest",
     "prettier": "latest",
     "react": "latest",
     "react-axe": "latest",
+    "react-test-renderer": "latest",
     "react-dom": "latest",
     "ts-jest": "latest",
     "typescript": "latest",
@@ -129,14 +126,7 @@
         "moduleNameMapper": {
           "^@src/(.*)$": "<rootDir>/src/$1",
           "^@pages/(.*)$": "<rootDir>/pages/$1"
-        },
-        "setupFilesAfterEnv": [
-          "jest-enzyme"
-        ],
-        "testEnvironment": "enzyme",
-        "snapshotSerializers": [
-          "enzyme-to-json/serializer"
-        ]
+        }
       },
       {
         "runner": "jest-runner-eslint",
