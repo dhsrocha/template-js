@@ -3741,7 +3741,7 @@ babel-plugin-react-require@latest:
   resolved "https://registry.yarnpkg.com/babel-plugin-react-require/-/babel-plugin-react-require-3.1.3.tgz#ba3d7305b044a90c35c32c5a9ab943fd68e1638d"
   integrity sha512-kDXhW2iPTL81x4Ye2aUMdEXQ56JP0sBJmRQRXJPH5FsNB7fOc/YCsHTqHv8IovPyw9Rk07gdd7MVUz8tUmRBCA==
 
-"babel-plugin-styled-components@>= 1":
+"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@latest:
   version "1.10.7"
   resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.10.7.tgz#3494e77914e9989b33cc2d7b3b29527a949d635c"
   integrity sha512-MBMHGcIA22996n9hZRf/UJLVVgkEOITuR2SvjHLb5dSTUyR4ZRGn+ngITapes36FI3WLxZHfRhkA1ffHxihOrg==
@@ -11045,7 +11045,7 @@ raw-loader@^3.1.0:
     loader-utils "^1.1.0"
     schema-utils "^2.0.1"
 
-react-axe@^3.5.2:
+react-axe@latest:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/react-axe/-/react-axe-3.5.2.tgz#09b25d7e169a64b680d921de9a735c4d66689e0d"
   integrity sha512-uEgCO0lg3e2iseKi+pWiyJO6T63b4K7EN7PD2y73Dz++A7o1DKD5Cw1+fRDlcDeqNYUVM8bFF7jFYtEOxJpQkg==

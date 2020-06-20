@@ -50,6 +50,7 @@
     "@typescript-eslint/parser": "latest",
     "babel-loader": "latest",
     "babel-plugin-react-require": "latest",
+    "babel-plugin-styled-components": "latest",
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-jest": "latest",
@@ -65,7 +66,7 @@
     "jest-styled-components": "latest",
     "prettier": "latest",
     "react": "latest",
-    "react-axe": "^3.5.2",
+    "react-axe": "latest",
     "react-dom": "latest",
     "react-test-renderer": "latest",
     "ts-jest": "latest",
@@ -103,7 +104,7 @@
     ],
     "projects": [
       {
-        "displayName": "Jest + Enzyme",
+        "displayName": "Jest",
         "preset": "ts-jest/presets/js-with-babel",
         "testMatch": [
           "<rootDir>/src/**/*.test.*",

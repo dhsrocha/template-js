@@ -24,4 +24,31 @@ module.exports = {
     "@src": resolve(__dirname, "./src"),
     "@pages": resolve(__dirname, "./pages"),
   },
+  // https://github.com/vercel/next.js/issues/7322#issuecomment-643710701
+  plugins: [
+    [
+      "babel-plugin-styled-components",
+      { ssr: true, displayName: true, preprocess: false },
+    ],
+  ],
+  env: {
+    development: {
+      plugins: [
+        [
+          "babel-plugin-styled-components",
+          { ssr: true, displayName: true, preprocess: false },
+        ],
+      ],
+      presets: ["next/babel"],
+    },
+    production: {
+      plugins: [
+        [
+          "babel-plugin-styled-components",
+          { ssr: true, displayName: true, preprocess: false },
+        ],
+      ],
+      presets: ["next/babel"],
+    },
+  },
 };
