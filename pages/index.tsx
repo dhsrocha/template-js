@@ -1,6 +1,5 @@
-import { NextPage } from "next";
+import { NextPage, Head } from "next";
 import { Root } from "@src/Root";
-import { Head } from "next";
 
 /**
  * @author Diego Rocha <dhsrocha.dev@gmail.com>
